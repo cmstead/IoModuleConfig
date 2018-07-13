@@ -1,5 +1,3 @@
-Importer addSearchPath("src/ModuleConfig")
-
 IoModuleConfigPackage := ModuleConfig clone \
     do(
         setName("IoModuleConfig")
