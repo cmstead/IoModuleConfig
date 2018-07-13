@@ -13,7 +13,7 @@ ioTest testSuite("ModuleConfig prodConfig") \
 
             moduleConfigInstance production call()
 
-            callCount := productionConfigSpy getCallCount call()
+            callCount := productionConfigSpy getCallCount
             failureMessage := "Production config spy called #{callCount} times" interpolate
 
             IoAssertion assertEqual(callCount, 1, failureMessage)
@@ -33,7 +33,7 @@ ioTest testSuite("ModuleConfig prodConfig") \
 
             moduleConfigInstance development call()
 
-            callCount := productionConfigSpy getCallCount call()
+            callCount := productionConfigSpy getCallCount
             failureMessage := "Production config spy called #{callCount} times" interpolate
 
             IoAssertion assertEqual(callCount, 1, failureMessage)
@@ -55,7 +55,7 @@ ioTest testSuite("ModuleConfig prodConfig") \
 
             moduleConfigInstance development call()
 
-            callCount := devConfigSpy getCallCount call()
+            callCount := devConfigSpy getCallCount
             failureMessage := "Development config spy called #{callCount} times" interpolate
 
             IoAssertion assertEqual(callCount, 1, failureMessage)
@@ -77,7 +77,7 @@ ioTest testSuite("ModuleConfig prodConfig") \
 
             moduleConfigInstance production call()
 
-            callCount := devConfigSpy getCallCount call()
+            callCount := devConfigSpy getCallCount
             failureMessage := "Development config spy called #{callCount} times" interpolate
 
             IoAssertion assertEqual(callCount, 0, failureMessage)

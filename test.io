@@ -8,5 +8,4 @@ IoTestRunnerFactory \
         setCwd(cwd) \
         setTestExtension(".test") \
         addTestPath("tests") \
-        addTestPath("tests/utilities") \
         run()

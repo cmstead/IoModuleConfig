@@ -5,7 +5,7 @@ ioTest testSuite("ModuleConfig devConfig") \
         block(
             moduleConfigInstance := ModuleConfig clone
 
-            developmentConfigSpy := SpyFactory build()
+            developmentConfigSpy := SpyFactory build
 
             moduleConfigInstance devConfig(block(
                 developmentConfigSpy call
@@ -13,7 +13,7 @@ ioTest testSuite("ModuleConfig devConfig") \
 
             moduleConfigInstance development call
 
-            callCount := developmentConfigSpy getCallCount call
+            callCount := developmentConfigSpy getCallCount
             failureMessage := "Development config spy called #{callCount} times" interpolate
 
             IoAssertion assertEqual(callCount, 1, failureMessage)
@@ -35,7 +35,7 @@ ioTest testSuite("ModuleConfig devConfig") \
 
             moduleConfigInstance development call
 
-            callCount := prodConfigSpy getCallCount call
+            callCount := prodConfigSpy getCallCount
             failureMessage := "Production config spy called #{callCount} times" interpolate
 
             IoAssertion assertEqual(callCount, 1, failureMessage)
